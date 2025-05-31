@@ -3,10 +3,15 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/public/assets/fav.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  
+  <!-- SEO stuff  -->
+  <meta name="description" content="AI Sellers 2.0 - Your AI Marketing Assistant for creating viral marketing campaigns and generating leads" />
+  <meta name="keywords" content="AI marketing, viral campaigns, marketing automation, lead generation" />
+  <title>AI Sellers 2.0 - AI Marketing Assistant</title>
 
+  <!-- fonts from google - poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -16,276 +21,293 @@
 </head>
 
 <body class="bg-black text-white font-[Poppins] overflow-x-hidden">
+  <!-- header with blur efect -->
   <header
-    class="uppercase flex justify-between items-center bg-slate-900 py-5 px-22 bg-[url('/assets/header_bg3.png')] bg-cover bg-center shadow-[0px_10px_50px_0px_rgba(0,0,0,0.5)] backdrop-blur-md ">
+    class="uppercase flex py-4 px-4 justify-between items-center bg-slate-900 py-5 px-4 md:px-10 lg:px-22 bg-[url('/assets/header_bg.webp')] bg-cover bg-center shadow-[0px_10px_50px_0px_rgba(0,0,0,0.5)] backdrop-blur-md fixed top-0 left-0 right-0 z-50">
+    
+    <!-- logo with gradient - might change color later -->
     <div class="logo_section flex items-center gap-2">
-      <img class="w-14 h-14" src="/assets/logo.svg" alt="logo" class="logo">
-      <h1 class="text-2xl font-bold bg-gradient-to-r from-[#B549FF] to-[#7185FF] bg-clip-text text-transparent">AI
+      <img class="w-10 h-10 md:w-14 md:h-14" src="/assets/logo.svg" alt="AI Sellers 2.0 Logo" class="logo">
+      <h1 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#B549FF] to-[#7185FF] bg-clip-text text-transparent">AI
         SELLERS 2.0</h1>
     </div>
-    <nav>
-      <ul class="flex items-center gap-10 text-xs font-bold">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Swipe & Tools</a></li>
-        <li><a href="#">Jv Page</a></li>
-        <li><a href="#">Product Demo</a></li>
-        <li><a href="#">Bonus Page</a></li>
+
+    <!-- hamburger menu - only on mobile and tablet -->
+    <button id="hamburger" class="lg:hidden text-white p-2 z-50" aria-label="Toggle navigation menu">
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+
+    <!-- nav menu - slides in from right -->
+    <nav id="nav-menu" class="fixed lg:static top-0 right-[-100%] lg:right-0 w-[80%] lg:w-auto h-screen lg:h-auto bg-[#150737] lg:bg-transparent transition-all duration-300 ease-in-out z-40 lg:block">
+      <ul class="flex flex-col lg:flex-row justify-center lg:justify-end items-center gap-4 lg:gap-10 text-xs md:text-sm lg:text-xs font-bold h-full lg:h-auto pt-20 lg:pt-0">
+        <li><a href="#" class="block py-2 lg:py-0">Home</a></li>
+        <li><a href="#" class="block py-2 lg:py-0">Swipe & Tools</a></li>
+        <li><a href="#" class="block py-2 lg:py-0">Jv Page</a></li>
+        <li><a href="#" class="block py-2 lg:py-0">Product Demo</a></li>
+        <li><a href="#" class="block py-2 lg:py-0">Bonus Page</a></li>
       </ul>
     </nav>
   </header>
-  <main class="h-full">
-    <div class="p1 bg-[url('/assets/page1_bg.png')] bg-cover bg-center h-[180vh]">
-      <div class="hero_section flex flex-col items-center justify-between w-[70%] h-full mx-auto">
-        <div
-          class="hero_btn capitalise rounded-full bg-gradient-to-b from-black to-[#1B1811] shadow-[0_0_20px_0_#6E38FD] px-14 py-4 font-normal mt-20">
+
+  <!-- main content - added margin cuz header is fixed -->
+  <main class="h-full mt-22 lg:mt-18">
+    <!-- Page 1 hero section -->
+    <section class="p1 bg-[url('/assets/page1_bg.webp')] bg-cover bg-center h-[120vh] sm:h-[130vh] lg:h-[180vh] xl:h-[200vh]">
+      <div class="hero_section flex flex-col items-center justify-between w-[90%] md:w-[70%] h-full mx-auto">
+        <article
+          class="hero_btn capitalise rounded-full bg-gradient-to-b from-black to-[#1B1811] shadow-[0_0_20px_0_#6E38FD] px-6 md:px-14 py-4 font-normal mt-10 md:mt-20 text-center text-sm md:text-base">
           Could This AI App Be Your $2,000/Month Marketing Assistant?
-        </div>
-        <div class="hero_text w-[94%] mx-auto">
-          <h1 class="text-center text-4xl leading-12">
+        </article>
+        <article class="hero_text w-full md:w-[94%] mx-auto">
+          <h2 class="text-center text-2xl md:text-4xl leading-10 md:leading-12">
             <span class="text-[#6E38FD] font-bold">LIVE WORKSHOP:</span> How I Created a Complete Viral Marketing
             Campaign in 11 Minutes While Making Coffee (That Now Runs on Complete Autopilot)
-          </h1>
-        </div>
-        <div class="hero_slide_section relative w-screen h-24 pt-8">
+          </h2>
+        </article>
+        <aside class="hero_slide_section relative w-screen h-24 pt-8">
           <div
             class="slide2 absolute w-screen bg-[#180a3d]/70 text-center flex items-center justify-center h-24 rotate-[-2deg]">
           </div>
-          <h2
-            class="slide1 absolute w-screen bg-[#38178F] text-center flex items-center justify-center h-24 rotate-[2deg] text-xl">
-            Win a FREE Copy of AIsSellers + $150 in Credits & More!</div>
-
-        </h2>
-        <div class="hero_img">
-          <img src="/assets/laptop.png" alt="hero_img">
-        </div>
+          <h3
+            class="slide1 absolute w-[101%] -translate-x-1 bg-[#38178F] text-center flex items-center justify-center h-24 rotate-[2deg] text-sm sm:text-base md:text-xl">
+            Win a FREE Copy of AIsSellers + $150 in Credits & More!</h3>
+        </aside>
+        <figure class="hero_img w-full md:w-auto">
+          <img src="/assets/laptop.webp" alt="AI Marketing Assistant Dashboard" class="w-full h-auto">
+        </figure>
       </div>
-    </div>
-    <section class="p2 h-auto w-screen bg-[url('/assets/p2_bg.png')] bg-cover bg-center relative">
+    </section>
+
+    <!-- Page 2 feature section -->
+    <section class="p2 h-auto w-screen bg-[url('/assets/p2_bg.webp')] bg-cover bg-center relative">
       <img src="/assets/line1.png" alt="line1" class="absolute  top-[15%] left-0 z-10">
       <img src="/assets/line2.png" alt="line2" class="absolute top-[36%] z-10 left-[-3%]">
-      <section class="p2_section w-[75%] mx-auto flex flex-col gap-14 z-20 relative">
-        <h1 class="capitalise text-center text-5xl font-bold w-[90%] leading-16 mt-20">Here's A Glipmse Of What You'll
+      <section class="p2_section w-[90%] md:w-[75%] mx-auto flex flex-col gap-14 z-20 relative">
+        <h1 class="capitalise text-center text-3xl md:text-5xl font-bold w-full md:w-[90%] leading-10 md:leading-16 mt-10 md:mt-20">Here's A Glipmse Of What You'll
           Discover During The Live Workshop</h1>
-        <section class="feature_section flex w-full gap-10 p-2">
-          <section class="feature_left_section pt-4 pb-2 text-lg w-[70%] text-[#BABABA] ">
+        <section class="feature_section flex flex-col-reverse lg:flex-row w-full gap-10 p-2">
+          <section class="feature_left_section pt-4 pb-2 text-base md:text-lg w-full lg:w-[70%] text-[#BABABA]">
             <ul class="features flex flex-col gap-4">
               <li class="feature_item flex items-start gap-4">
-                <img class="w-10" src="/assets/tick.png" alt="feature_icon1">
-                <p class="feature_item_title">How to create your first profit-generating AI marketing campaign in under
+                <img class="w-8 md:w-10" src="/assets/tick.png" alt="feature_icon1">
+                <p class="feature_item_title text-sm md:text-base">How to create your first profit-generating AI marketing campaign in under
                   15 minutes (even if you're completely non-technical)
                 <p>
               </li>
               <li class="feature_item flex items-start gap-4">
-                <img class="w-10" src="/assets/tick.png" alt="feature_icon1">
-                <p class="feature_item_title">The "5-Minute Method" for turning any product or service into a complete
+                <img class="w-8 md:w-10" src="/assets/tick.png" alt="feature_icon1">
+                <p class="feature_item_title text-sm md:text-base">The "5-Minute Method" for turning any product or service into a complete
                   marketing system that generates leads while you sleep
                 <p>
               </li>
               <li class="feature_item flex items-start gap-4">
-                <img class="w-10" src="/assets/tick.png" alt="feature_icon1">
-                <p class="feature_item_title">Why most businesses waste 80% of their marketing budget (and how AISellers
+                <img class="w-8 md:w-10" src="/assets/tick.png" alt="feature_icon1">
+                <p class="feature_item_title text-sm md:text-base">Why most businesses waste 80% of their marketing budget (and how AISellers
                   eliminates this waste completely)
                 <p>
               </li>
               <li class="feature_item flex items-start gap-4">
-                <img class="w-10" src="/assets/tick.png" alt="feature_icon1">
-                <p class="feature_item_title">The exact process for landing $1,500-2,500/month retainer clients using
+                <img class="w-8 md:w-10" src="/assets/tick.png" alt="feature_icon1">
+                <p class="feature_item_title text-sm md:text-base">The exact process for landing $1,500-2,500/month retainer clients using
                   nothing but AISellers demos
                 <p>
               </li>
               <li class="feature_item flex items-start gap-4">
-                <img class="w-10" src="/assets/tick.png" alt="feature_icon1">
-                <p class="feature_item_title">Plus, a chance to win a free copy of AISellers + $150 in credits and
+                <img class="w-8 md:w-10" src="/assets/tick.png" alt="feature_icon1">
+                <p class="feature_item_title text-sm md:text-base">Plus, a chance to win a free copy of AISellers + $150 in credits and
                   exclusive AI launch bonuses!
                 <p>
               </li>
             </ul>
           </section>
-          <section class="feature_right_section h-full">
-            <img src="/assets/product.png" alt="feature_right_img">
+          <section class="feature_right_section h-full w-full md:w-auto">
+            <img src="/assets/product.webp" alt="feature_right_img" class="w-full h-auto">
           </section>
         </section>
-        <section
-          class="sign_up_section overflow-hidden w-[80%] mx-auto flex gap-0 bg-gradient-to-b from-[#181825] to-black rounded-[30px] border-[2.36px] border-[#121f39]">
-          <div class="sign_up_left w-[50%] -translate-x-14 translate-y-20 shrink-0 flex items-end justify-center">
-            <img src="/assets/email.png" alt="sign_up_left">
 
+        <!-- Page 3 sign up section -->
+        <section
+          class="sign_up_section overflow-hidden w-[95%] lg:w-[80%] mx-auto flex flex-col lg:flex-row gap-0 bg-gradient-to-b from-[#181825] to-black rounded-[30px] border-[2.36px] border-[#121f39]">
+          <div class="sign_up_left w-full md:w-[80%] mx-auto
+           lg:w-[50%] -translate-x-0 lg:-translate-x-14 translate-y-0 lg:translate-y-20 shrink-0 flex items-end justify-center">
+            <img src="/assets/email.webp" alt="sign_up_left" class="w-full md:w-auto">
           </div>
-          <div class="sign_up_right flex flex-col gap-10 w-[50%] items-center justify-start p-4">
-            <h1 class="text-xl font-bold mt-6">Join Us For The LIVE Reveal Of AISellers On [Date Here] at 10:00 am EST
+          <div class="sign_up_right flex flex-col gap-6 lg:gap-10 w-full lg:w-[50%] items-center justify-start p-4">
+            <h1 class="text-lg md:text-xl font-bold mt-6 text-center">Join Us For The LIVE Reveal Of AISellers On [Date Here] at 10:00 am EST
               & Win a FREE Copy + $150!</h1>
             <form class="w-full flex flex-col gap-4 text-zinc-500 font-semibold" action="">
               <div class="w-full flex text-sm gap-4 p-4 items-center bg-[#191934] rounded-full">
                 <img class="h-4 w-5" src="/assets/user_icon.svg" alt="user">
-                <input type="text" class="outline-none border-0 "  placeholder="Enter Name">
+                <input type="text" class="outline-none border-0 w-full" placeholder="Enter Name">
               </div>
               <div class="w-full flex text-sm gap-4 p-4 items-center bg-[#191934] rounded-full">
                 <img class="h-4 w-5" src="/assets/email_icon.svg" alt="user">
-                <input type="text"  class="outline-none border-0 " placeholder="Enter Email">
+                <input type="text" class="outline-none border-0 w-full" placeholder="Enter Email">
               </div>
               <button type="submit"
-                class=" w-[84%]  text-white font-bold py-4 text-center bg-[#6E38FD] rounded-[1.7rem] my-4 px-1"
+                class="btn-signup md:w-[84%] my-4 px-1"
                 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.50)">SIGN UP NOW FOR THE BIG REVEAL!</button>
             </form>
           </div>
         </section>
 
+        <!-- Page 3 sign up below section -->
         <section
-          class="sign_up_below_section w-[75%] mx-auto flex flex-col gap-10 text-center text-[#BABABA] items-center mt-10 z-20 relative">
-          <p>If You Still Need More Information To Make Your Decision... Keep Reading. But Be Aware: If You Take The
-            Time To Read Every Word On This Page, All 1,000 Seats May Be Gone. </p>
-          <p>You Are One Of An Estimated 128,375 People This Week Reading This Message (Based On The Estimated
+          class="sign_up_below_section w-[95%] md:w-[75%] mx-auto flex flex-col gap-6 md:gap-10 text-center text-[#BABABA] items-center mt-10 z-20 relative">
+          <p class="text-sm md:text-base">If You Still Need More Information To Make Your Decision... Keep Reading. But Be Aware: If You Take The
+            Time To Read Every Word On This Page, All 1,000 Seats May Be Gone. </p>
+          <p class="text-sm md:text-base">You Are One Of An Estimated 128,375 People This Week Reading This Message (Based On The Estimated
             Subscriber Base Of Our Promotional Partners...And Not All Of Them Would Reveal Their Numbers, So It's
-            Probably More). </p>
-          <p>If Only 0.05% Of You Decide To Join Us...We'll Be Sold Out. The Best Bet Is To Register Right </p>
-          <button class=" w-[50%]  text-white font-bold py-5 text-center bg-[#6E38FD] rounded-[1.7rem] mt-4"
-            style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.50)">SIGN UP NOW FOR THE BIG REVEAL!</button>
-
+            Probably More). </p>
+          <p class="text-sm md:text-base">If Only 0.05% Of You Decide To Join Us...We'll Be Sold Out. The Best Bet Is To Register Right </p>
+          <button class="btn-signup md:w-[50%] md:py-5 mt-4" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.50)">SIGN UP NOW FOR THE BIG REVEAL!</button>
         </section>
-        <section class="testimonial_section w-[88%] flex flex-col gap-6 items-center mx-auto mt-18 mb-20">
-          <h1 class="text-center text-4xl leading-13 w-full mb-14">These Guys Have Made Millions Selling <span
+
+        <!-- Page 3 testimonial section -->
+        <section class="testimonial_section w-[95%] md:w-[88%] flex flex-col gap-6 items-center mx-auto mt-10 md:mt-18 mb-10 md:mb-20">
+          <h1 class="text-center text-2xl md:text-4xl leading-10 md:leading-13 w-full mb-8 md:mb-14">These Guys Have Made Millions Selling <span
               class="text-[#6E38FD]"> Ebooks, Videos, Content, Chatbots, And Other AI Products...</span> With AISellers,
             You Can Do The Same (Even Better)</h1>
 
-          <div class="testimonial_container flex flex-wrap gap-8">
+          <div class="testimonial_container flex flex-col lg:flex-row flex-wrap gap-6 md:gap-8">
             <div
-              class="testimonial_item t1 flex flex-col gap-10 items-center justify-center p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-[30vw] h-[35vw]">
-              <h2 class=" text-lg">Alex Soltan Is Making <span class="text-[#6E38FD] font-bold"> $23,000 Per Month</span> Selling
+              class="testimonial_item t1 flex flex-col gap-6 lg:gap-10 items-center justify-center p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[30vw] h-auto lg:h-[35vw]">
+              <h2 class="text-base md:text-lg">Alex Soltan Is Making <span class="text-[#6E38FD] font-bold"> $23,000 Per Month</span> Selling
                 <span class="text-[#6E38FD] font-bold"> AI-Generated Ebooks… </span>
               </h2>
               <div class="rounded-xl overflow-hidden w-[75%] rotate-[-4.5deg]">
-                <img src="/assets/t1.png" alt="testimonial_img1" class="w-full h-full">
+                <img src="/assets/t1.webp" alt="testimonial_img1" class="w-full h-full">
               </div>
               <img src="/assets/line3_t1.png" alt="testimonial_img1" class="absolute top-[50%] left-0 w-[90%]">
-
             </div>
 
             <div
-              class="testimonial_item t2 flex flex-col gap-10 items-center justify-start p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-[30vw] h-[35vw]">
-              <h2 class=" text-lg">Another Guy Has<span class="text-[#6E38FD] font-bold"> Made Over $1.63 Million</span> By Selling
+              class="testimonial_item t2 flex flex-col gap-6 lg:gap-10 items-center justify-center p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[30vw] h-auto lg:h-[35vw]">
+              <h2 class="text-base md:text-lg">Another Guy Has<span class="text-[#6E38FD] font-bold"> Made Over $1.63 Million</span> By Selling
                 <span class="text-[#6E38FD] font-bold"> AI-Generated Ebook </span>On Amazon...
               </h2>
               <div class="rounded-xl overflow-hidden w-[95%]">
                 <img src="/assets/t2.png" alt="testimonial_img1" class="w-full h-full">
               </div>
               <img src="/assets/line3_t1.png" alt="testimonial_img1" class="absolute top-[50%] left-0 w-[90%]">
-
             </div>
+
             <div
-              class="testimonial_item t3 flex flex-col gap-16 items-center justify-start p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-[30vw] h-[30vw]">
-              <h2 class=" text-lg">This Guy Made A <span class="text-[#6E38FD] font-bold">AI Chatbot</span> That Makes Him
+              class="testimonial_item t3 flex flex-col gap-6 lg:gap-10 items-center justify-center p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[30vw] h-auto lg:h-[35vw]">
+              <h2 class="text-base md:text-lg">This Guy Made A <span class="text-[#6E38FD] font-bold">AI Chatbot</span> That Makes Him
                 <span class="text-[#6E38FD] font-bold"> $350,000 Each Year...</span>
               </h2>
               <div class="rounded-xl overflow-hidden w-[95%]">
-                <img src="/assets/t3.png" alt="testimonial_img1" class="w-full h-full">
+                <img src="/assets/t3.webp" alt="testimonial_img1" class="w-full h-full">
               </div>
               <img src="/assets/line3_t1.png" alt="testimonial_img1" class="absolute top-[50%] left-0 w-[90%]">
-
             </div>
+
             <div
-              class="testimonial_item t4 flex flex-col gap-16 items-center justify-start p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-[30vw] h-[30vw]">
-              <h2 class=" text-lg">Jason Wardrop Sells <span class="text-[#6E38FD] font-bold">AI Services Like Images, Videos, And Content</span> To Local Businesses And
+              class="testimonial_item t4 flex flex-col gap-6 lg:gap-10 items-center justify-center p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[30vw] h-auto lg:h-[35vw]">
+              <h2 class="text-base md:text-lg">Jason Wardrop Sells <span class="text-[#6E38FD] font-bold">AI Services Like Images, Videos, And Content</span> To Local Businesses And
                 <span class="text-[#6E38FD] font-bold">Makes $19K/Month</span>
               </h2>
               <div class="rounded-xl overflow-hidden w-[95%]">
-                <img src="/assets/t4.png" alt="testimonial_img1" class="w-full h-full">
+                <img src="/assets/t4.webp" alt="testimonial_img1" class="w-full h-full">
               </div>
               <img src="/assets/line3_t1.png" alt="testimonial_img1" class="absolute top-[50%] left-0 w-[90%]">
-
             </div>
+
             <div
-              class="testimonial_item t5 flex flex-col gap-16 items-center justify-start p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-[30vw] h-[30vw]">
-              <h2 class=" text-lg">This Guy Went From <span class="text-[#6E38FD] font-bold">0 To 56K Clients </span>In 3 Months Using AI Content (2025 Blog Case Study)
+              class="testimonial_item t5 flex flex-col gap-6 lg:gap-10 items-center justify-center p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[30vw] h-auto lg:h-[35vw]">
+              <h2 class="text-base md:text-lg">This Guy Went From <span class="text-[#6E38FD] font-bold">0 To 56K Clients </span>In 3 Months Using AI Content (2025 Blog Case Study)
               </h2>
               <div class="rounded-xl overflow-hidden w-[95%]">
-                <img src="/assets/t5.png" alt="testimonial_img1" class="w-full h-full">
+                <img src="/assets/t5.webp" alt="testimonial_img1" class="w-full h-full">
               </div>
               <img src="/assets/line3_t1.png" alt="testimonial_img1" class="absolute top-[50%] left-0 w-[90%]">
-
             </div>
+
             <div
-              class="testimonial_item t6 flex flex-col gap-16 items-center justify-start p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-[30vw] h-[30vw]">
-              <h2 class=" text-lg">This Guy Started And <span class="text-[#6E38FD] font-bold">Scaled His AI Agency To $122,351</span> Just To Prove It's NOT Luck...
+              class="testimonial_item t6 flex flex-col gap-6 lg:gap-10 items-center justify-center p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[30vw] h-auto lg:h-[35vw]">
+              <h2 class="text-base md:text-lg">This Guy Started And <span class="text-[#6E38FD] font-bold">Scaled His AI Agency To $122,351</span> Just To Prove It's NOT Luck...
               </h2>
               <div class="rounded-xl overflow-hidden w-[95%]">
-                <img src="/assets/t6.png" alt="testimonial_img1" class="w-full h-full">
+                <img src="/assets/t6.webp" alt="testimonial_img1" class="w-full h-full">
               </div>
               <img src="/assets/line3_t1.png" alt="testimonial_img1" class="absolute top-[50%] left-0 w-[90%]">
-
             </div>
-
-
+          </div>
         </section>
       </section>
     </section>
-    <section class="p3 h-[140vh] w-screen bg-[url('/assets/p3_bg.png')] bg-cover bg-center pb-20">
-      <div class="p3_container w-[75%] mx-auto flex flex-col gap-10 pt-[8vw]">
-        <h1 class="text-center text-5xl leading-14 font-bold w-[80%] mx-auto b">
+
+    <!-- Page 3 sign up section -->
+    <section class="p3 h-auto min-h-[140vh] w-screen bg-[url('/assets/p3_bg.png')] bg-cover bg-center pb-20">
+      <div class="p3_container w-[95%] md:w-[75%] mx-auto flex flex-col gap-6 md:gap-10 pt-[8vw]">
+        <h1 class="text-center text-3xl md:text-5xl leading-10 md:leading-14 font-bold w-full md:w-[80%] mx-auto">
           Want To See How You Can Get Similar Results?
         </h1>
-        <p
-          class="text-center text-3xl w-[80%] mx-auto font-light bg-gradient-to-r from-white to-[#777] bg-clip-text text-transparent">
+        <p class="text-center text-xl md:text-3xl w-full md:w-[80%] mx-auto font-light bg-gradient-to-r from-white to-[#777] bg-clip-text text-transparent">
           Register For The Webinar Below And Make Sure To Attend It Live (BIG SURPRISES AWAITING)</p>
           <section
-          class="sign_up_section overflow-hidden w-[80%] mx-auto flex gap-0 bg-gradient-to-b from-[#181825] to-black rounded-[30px] border-[2.36px] border-[#121f39]">
-          <div class="sign_up_left w-[50%] -translate-x-14 translate-y-20 shrink-0 flex items-end justify-center">
-            <img src="/assets/email.png" alt="sign_up_left">
-
+          class="sign_up_section overflow-hidden w-[95%] lg:w-[80%] mx-auto flex flex-col lg:flex-row gap-0 bg-gradient-to-b from-[#181825] to-black rounded-[30px] border-[2.36px] border-[#121f39]">
+          <div class="sign_up_left w-full md:w-[80%] mx-auto 
+           lg:w-[50%] -translate-x-0 lg:-translate-x-14 translate-y-0 lg:translate-y-20 shrink-0 flex items-end justify-center">
+            <img src="/assets/email.webp" alt="sign_up_left" class="w-full md:w-auto">
           </div>
-          <div class="sign_up_right flex flex-col gap-10 w-[50%] items-center justify-start p-4">
-            <h1 class="text-xl font-bold mt-6">Join Us For The LIVE Reveal Of AISellers On [Date Here] at 10:00 am EST
+          <div class="sign_up_right flex flex-col gap-6 lg:gap-10 w-full lg:w-[50%] items-center justify-start p-4">
+            <h1 class="text-lg md:text-xl font-bold mt-6 text-center">Join Us For The LIVE Reveal Of AISellers On [Date Here] at 10:00 am EST
               & Win a FREE Copy + $150!</h1>
             <form class="w-full flex flex-col gap-4 text-zinc-500 font-semibold" action="">
               <div class="w-full flex text-sm gap-4 p-4 items-center bg-[#191934] rounded-full">
                 <img class="h-4 w-5" src="/assets/user_icon.svg" alt="user">
-                <input type="text" class="outline-none border-0 "  placeholder="Enter Name">
+                <input type="text" class="outline-none border-0 w-full" placeholder="Enter Name">
               </div>
               <div class="w-full flex text-sm gap-4 p-4 items-center bg-[#191934] rounded-full">
                 <img class="h-4 w-5" src="/assets/email_icon.svg" alt="user">
-                <input type="text"  class="outline-none border-0 " placeholder="Enter Email">
+                <input type="text" class="outline-none border-0 w-full" placeholder="Enter Email">
               </div>
               <button type="submit"
-                class=" w-[84%]  text-white font-bold py-4 text-center bg-[#6E38FD] rounded-[1.7rem] my-4 px-1"
+                class="btn-signup md:w-[84%] my-4 px-1"
                 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.50)">SIGN UP NOW FOR THE BIG REVEAL!</button>
             </form>
           </div>
         </section>
       </div>
     </section>
-    <section class="p4 h-[100vh] w-screen bg-[url('/assets/p4_bg.png')] bg-cover bg-center pb-20">
 
-      <section class="feedback_section flex flex-wrap gap-8 w-full h-[100vh] items-center justify-center">
+    <!-- Page 4 feedback section -->
+      <section class="p4 h-auto min-h-[100vh] w-screen bg-[url('/assets/p4_bg.png')] bg-cover bg-center pb-20">
+      <section class="feedback_section flex flex-col lg:flex-row flex-wrap gap-6 lg:gap-8 w-full
+      md:w-[75%] lg:w-full mx-auto h-auto min-h-[100vh] items-center justify-center p-4">
         <div
-          class="feedback_item f1 flex flex-col gap-6 items-start justify-between p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-[26vw] h-[33vw]">
-          <h2 class=" text-lg font-semibold">Last month I made <span class="text-[#6E38FD]"> $3,740 In
+          class="feedback_item f1 flex flex-col gap-6 items-start justify-between p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[26vw] h-auto lg:h-[33vw]">
+          <h2 class="text-base md:text-lg font-semibold">Last month I made <span class="text-[#6E38FD]"> $3,740 In
               Commissions...</span>
           </h2>
-          <p class="text-sm italic text-[#BABABA] w-[90%]">"I was struggling to make more than $400/month with affiliate marketing until I found
+          <p class="text-xs md:text-sm italic text-[#BABABA] w-[90%]">"I was struggling to make more than $400/month with affiliate marketing until I found
             AISellers 2.0. Within just 3 weeks of using the talking head videos and new landing page templates, my
             conversion rate jumped from 1.2% to 4.8%! Last month I made $3,740 in commissions working part-time. The
             flipbooks and automated email campaigns have been game changers for my business. Best investment I've made
             this year!"</p>
           <div class="feedback_name_section flex items-center justify-start gap-2">
-            <img src="/assets/f1.png" alt="user" class="w-14 h-14">
-            <h4 class="text-sm font-semibold">James Keller - Affiliate Marketer</h4>
+            <img src="/assets/f1.png" alt="user" class="w-10 h-10 md:w-14 md:h-14">
+            <h4 class="text-xs md:text-sm font-semibold">James Keller - Affiliate Marketer</h4>
           </div>
-
         </div>
 
         <div
-          class="feedback_item f1 flex flex-col gap-6 items-start justify-between p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-[26vw] h-[33vw]">
-          <h2 class=" text-lg font-semibold">One restaurant owner saw a <span class="text-[#6E38FD]">27% increase in booking...</span>
+          class="feedback_item f1 flex flex-col gap-6 items-start justify-between p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[26vw] h-auto lg:h-[33vw]">
+          <h2 class="text-base md:text-lg font-semibold">One restaurant owner saw a <span class="text-[#6E38FD]">27% increase in booking...</span>
           </h2>
-          <p class="text-sm italic text-[#BABABA] w-[90%]">"AISellers 2.0 helped me land 3 new clients in my first month at $1,500 each! The clients were blown away by the quality of the AI videos and custom chatbots I created for them in literally minutes. One restaurant owner saw a 27% increase in bookings after we implemented the SMS campaign feature. I'm working half the hours and making triple what I did before. This tool is insane!"</p>
+          <p class="text-xs md:text-sm italic text-[#BABABA] w-[90%]">"AISellers 2.0 helped me land 3 new clients in my first month at $1,500 each! The clients were blown away by the quality of the AI videos and custom chatbots I created for them in literally minutes. One restaurant owner saw a 27% increase in bookings after we implemented the SMS campaign feature. I'm working half the hours and making triple what I did before. This tool is insane!"</p>
           <div class="feedback_name_section flex items-center justify-start gap-2">
-            <img src="/assets/f2.png" alt="user" class="w-14 h-14">
-            <h4 class="text-sm font-semibold">Linda Reeves - Local Marketing Consultant</h4>
+            <img src="/assets/f2.png" alt="user" class="w-10 h-10 md:w-14 md:h-14">
+            <h4 class="text-xs md:text-sm font-semibold">Linda Reeves - Local Marketing Consultant</h4>
           </div>
-
         </div>
-       
       </section>
-
     </section>
   </main>
   <footer></footer>

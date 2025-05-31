@@ -3,3 +3,55 @@
 header h1{
   
 }
+
+@layer utilities {
+  .btn-signup {
+    @apply w-full text-white font-bold py-4 text-center bg-[#6E38FD] rounded-[1.7rem] text-sm md:text-base;
+  }
+  .signup-container {
+    @apply overflow-hidden w-[95%] md:w-[80%] mx-auto flex flex-col md:flex-row gap-0 bg-gradient-to-b from-[#181825] to-black rounded-[30px] border-[2.36px] border-[#121f39];
+  }
+  .input-wrapper {
+    @apply w-full flex text-sm gap-4 p-4 items-center bg-[#191934] rounded-full;
+  }
+  .testimonial-card {
+    @apply flex flex-col items-center p-4 md:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full h-auto;
+  }
+  .feature-item {
+    @apply flex items-start gap-4;
+  }
+  .text-responsive {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+}
+
+/* Burger menu animation */
+.burger {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #cac8c8;
+  margin: 6px 0;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    opacity 0.3s ease;
+}
+
+/* Animation for active state */
+#hamburger.active .burger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger.active .burger span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+#hamburger.active .burger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

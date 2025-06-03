@@ -15,7 +15,7 @@ header h1{
     @apply w-full flex text-sm gap-4 p-4 items-center bg-[#191934] rounded-full;
   }
   .testimonial-card {
-    @apply flex flex-col items-center p-4 md:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full h-auto;
+    @apply  flex flex-col gap-6 lg:gap-10 items-center p-4 lg:p-6 relative overflow-hidden bg-gradient-to-b from-[#1B1B1B] to-black rounded-[30px] border-[2.36px] border-[#1C1C30] w-full lg:w-[30vw] h-auto lg:h-[35vw];
   }
   .feature-item {
     @apply flex items-start gap-4;
